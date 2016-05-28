@@ -398,7 +398,7 @@
   <project path="hardware/intel/sensors" name="platform/hardware/intel/sensors" groups="intel_sensors" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
   <project path="hardware/libhardware" remote="private" name="YU-N-AOSP/android_hardware_libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" remote="private" name="YU-N-AOSP/android_hardware_llibhardware_legacy" groups="pdk" />
+  <project path="hardware/libhardware_legacy" remote="private" name="YU-N-AOSP/android_hardware_libhardware_legacy" groups="pdk" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/mediatek" name="platform/hardware/mediatek" groups="mediatek,mediatek_wear" />
   <project path="hardware/qcom/audio" remote="private" name="YU-N-AOSP/android_hardware_qcom_audio" groups="qcom,qcom_audio" />
