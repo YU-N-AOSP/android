@@ -19,6 +19,32 @@
            remote="aosp"
            sync-j="4" />
 
+  <!-- CAF Repos -->
+  <project name="platform/external/ebtables" path="external/ebtables" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <project name="platform/external/mm-dash" path="external/mm-dash" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/bluetooth" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <project name="platform/vendor/qcom-opensource/dataservices" path="vendor/qcom/opensource/dataservices" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <project name="platform/vendor/qcom-opensource/display-frameworks" path="vendor/qcom/opensource/display-frameworks" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <project name="platform/vendor/qcom-opensource/dpm" path="vendor/qcom/opensource/dpm" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+ 
+  <!-- Device trees -->
+  <project name="YU-N-AOSP/android_device_qcom_common" path="device/qcom/common" remote="private" >
+    <copyfile dest="build.sh" src="build.sh"/>
+    <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+  </project>
+  <project path="device/qcom/sepolicy" name="YU-N-AOSP/android_device_qcom_sepolicy" remote="private"/>
+  <project name="YU-N-AOSP/android_device_qcom_msm8916_64" path="device/qcom/msm8916_64" remote="private">
+  <project path="device/yu/tomato" name="YU-N-AOSP/android_device_yu_tomato" remote="private"/>
+
+  <!-- CM -->
+  <project path="external/connectivity" name="CyanogenMod/android_external_connectivity" remote="github" revision="cm-13.0" />
+
+  <!-- Kernel and blobs -->
+  <project path="kernel_yu_msm8916_64" name="AOSParadox/android_kernel_cyanogen_msm8916" remote="private" revision="yu-par-6.0-amss-1.0.2" />
+  <project path="vendor/aosparadox" name="YU-N-AOSP/android_vendor_aosparadox" remote="private" />
+  <project path="vendor/yu/" name="AOSParadox/proprietary_vendor_yu" remote="private" revision="yu-par-6.0" />
+
   <project path="build" remote="private" name="YU-N-AOSP/android_build" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
