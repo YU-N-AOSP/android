@@ -34,7 +34,7 @@
     <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
   <project path="device/qcom/sepolicy" name="YU-N-AOSP/android_device_qcom_sepolicy" remote="private"/>
-  <project name="YU-N-AOSP/android_device_qcom_msm8916_64" path="device/qcom/msm8916_64" remote="private">
+  <project name="YU-N-AOSP/android_device_qcom_msm8916_64" path="device/qcom/msm8916_64" remote="private"/>
   <project path="device/yu/tomato" name="YU-N-AOSP/android_device_yu_tomato" remote="private"/>
 
   <!-- CM -->
