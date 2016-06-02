@@ -25,23 +25,23 @@
   <project name="platform/vendor/qcom-opensource/bluetooth" path="vendor/qcom/opensource/bluetooth" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
   <project name="platform/vendor/qcom-opensource/dataservices" path="vendor/qcom/opensource/dataservices" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
   <project name="platform/vendor/qcom-opensource/display-frameworks" path="vendor/qcom/opensource/display-frameworks" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
-  <project name="platform/vendor/qcom-opensource/dpm" path="vendor/qcom/opensource/dpm" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
-  <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima" remote="caf" revision="LA.BR.1.2.6_rb1.12"/>
+  <!-- <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima" remote="caf" revision="LA.BR.1.2.6_rb1.12"/> -->
  
   <!-- Device trees -->
   <project name="YU-N-AOSP/android_device_qcom_common" path="device/qcom/common" remote="private" >
     <copyfile dest="build.sh" src="build.sh"/>
     <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
-  <project path="device/qcom/sepolicy" name="YU-N-AOSP/android_device_qcom_sepolicy" remote="private"/>
   <project name="YU-N-AOSP/android_device_qcom_msm8916_64" path="device/qcom/msm8916_64" remote="private"/>
+  <project name="AOSParadox/android_device_qcom_msm8916_32" path="device/qcom/msm8916_32" remote="private" revision="yu-par-6.0"/>
   <project path="device/yu/tomato" name="YU-N-AOSP/android_device_yu_tomato" remote="private"/>
 
   <!-- CM -->
   <project path="external/connectivity" name="CyanogenMod/android_external_connectivity" remote="github" revision="cm-13.0" />
+  <project path="system/qcom" name="CyanogenMod/android_system_qcom" remote="github" revision="cm-13.0" />
 
   <!-- Kernel and blobs -->
-  <project path="kernel_yu_msm8916_64" name="AOSParadox/android_kernel_cyanogen_msm8916" remote="private" revision="yu-par-6.0-amss-1.0.2" />
+  <project path="kernel_yu_msm8916_64" name="AOSParadox/android_kernel_cyanogen_msm8916" remote="private" revision="android-n" />
   <project path="vendor/aosparadox" name="YU-N-AOSP/android_vendor_aosparadox" remote="private" />
   <project path="vendor/yu/" name="AOSParadox/proprietary_vendor_yu" remote="private" revision="yu-par-6.0" />
 
@@ -100,7 +100,7 @@
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/adt-infra" name="platform/external/adt-infra" groups="adt-infra,notdefault" />
-  <project path="external/android-clat" remote="private" name="YU-N-AOSP/android_external_android-clat" groups="pdk-cw-fs,pdk-fs" />
+  <project path="external/android-clat" name="platform/external/android-clat" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/android-mock" name="platform/external/android-mock" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/androidplot" name="platform/external/androidplot" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/ant-glob" name="platform/external/ant-glob" groups="pdk-cw-fs,pdk-fs" />
@@ -113,7 +113,7 @@
   <project path="external/avahi" name="platform/external/avahi" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs,pdk-fs" />
-  <project path="external/boringssl" name="platform/external/boringssl" groups="pdk" />
+  <project path="external/boringssl" remote="private" name="YU-N-AOSP/android_external_boringssl" groups="pdk" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
@@ -184,7 +184,7 @@
   <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" groups="pdk,qcom_msm8x26" />
   <project path="external/hyphenation-patterns" name="platform/external/hyphenation-patterns" groups="pdk-fs" />
   <project path="external/icu" name="platform/external/icu" groups="pdk" />
-  <project path="external/iproute2" remote="private" name="YU-N-AOSP/android_external_iproute2" groups="pdk" />
+  <project path="external/iproute2" name="platform/external/iproute2" groups="pdk" />
   <project path="external/ipsec-tools" name="platform/external/ipsec-tools" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/iptables" remote="private" name="YU-N-AOSP/android_external_iptables" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/iputils" name="platform/external/iputils" groups="pdk-cw-fs,pdk-fs" />
@@ -365,7 +365,7 @@
   <project path="frameworks/opt/inputconnectioncommon" name="platform/frameworks/opt/inputconnectioncommon" groups="pdk-fs" />
   <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" groups="pdk-fs" />
-  <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/opt/net/ims" remote="private" name="YU-N-AOSP/android_frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/wifi" remote="private" name="YU-N-AOSP/android_frameworks_opt_net_wifi" groups="pdk" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
@@ -452,7 +452,7 @@
   <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" groups="pdk-fs" />
   <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="pdk-fs" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs" />
-  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" />
+  <!-- <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" /> -->
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" groups="pdk-fs" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="pdk-fs" />
@@ -539,7 +539,7 @@
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
-  <project path="system/keymaster" remote="private" name="YU-N-AOSP/android_system_keymaster" groups="pdk" />
+  <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" remote="private" name="YU-N-AOSP/android_system_media" groups="pdk" />
   <project path="system/nativepower" name="platform/system/nativepower" />
   <project path="system/netd" remote="private" name="YU-N-AOSP/android_system_netd" groups="pdk" />
