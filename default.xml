@@ -15,7 +15,7 @@
 
   <remote fetch="git://codeaurora.org/quic/la/" name="caf" review="codeaurora.org"/>
 
-  <default revision="refs/tags/android-n-preview-2"
+  <default revision="refs/tags/android-7.0.0_r1"
            remote="aosp"
            sync-j="4" />
 
